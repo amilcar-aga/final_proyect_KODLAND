@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;800&display=swap");
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Cuerpo general alineado a la izquierda para el texto, ocupando toda la pantalla */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+  background: linear-gradient(180deg, #d55a0d 0%, rgba(232, 68, 9, 0.977) 100%);
+  color: #ffffff;
+  text-align: left; /* Alineado de izquierda a derecha como solicitaste */
+}
+
+/* Header superior fijo o estético para los enlaces del índice */
+header.header-teoria {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 20px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header.header-teoria h1 {
+  font-weight: 800;
+  font-size: 32px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+/* Navegación dentro del header organizada horizontalmente */
+.indice {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.indice a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.indice a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Contenedor principal de las secciones teóricas */
+main.contenido-teoria {
+  max-width: 800px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* Estilo para cada tarjeta de sección */
+.seccion {
+  scroll-margin-top: 140px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.seccion h2 {
+  font-weight: 700;
+  font-size: 26px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #ffe600; /* Destaca los títulos de sección */
+}
+
+.seccion h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.seccion p, 
+.seccion li {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.seccion ul {
+  padding-left: 20px;
+}
+
+.seccion li {
+  margin-bottom: 8px;
+}
+
+/* Corrección de la imagen grande de la calculadora */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #d55a0d;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.btn img {
+  width: 32px;      /* Controla el ancho estricto para que no se expanda */
+  height: 32px;     /* Controla la altura estricta */
+  object-fit: contain;
+}
+
+/* Botón flotante para volver arriba */
+.subir {
+  display: block;
+  text-align: center;
+  margin: 30px auto 50px auto;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: fit-content;
+  transition: background-color 0.2s ease;
+}
+
+.subir:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Aseguramos que el cuerpo ocupe toda la altura de la pantalla y use Flexbox vertical */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;      /* Ocupa mínimo el 100% de la altura visible */
+  margin: 0;
+  padding: 0 3%;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.2em;
+  background: linear-gradient(180deg, #d55a0d 0%, rgba(232, 68, 9, 0.977) 100%);
+  color: #ffffff;
+}
+
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  font-size: 42px;
+}
+
+img {
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: center; /* Centra todo el bloque del header horizontalmente */
+  align-items: center;
+  padding: 35px 0;
+  width: 100%;
+}
+
+/* Contenedor interno del título y subtítulo */
+.bienvenida-container {
+  display: flex;
+  flex-direction: column; /* Apila el título arriba y el subtítulo abajo */
+  align-items: center;     /* CLAVE: Centra ambos exactamente al mismo eje horizontal */
+  text-align: center;
+}
+
+.bienvenida-container p {
+  padding: 15px 0;
+}
+
+.centro {
+  flex: 1; /* Esto hace que el centro crezca y ocupe todo el espacio libre disponible */
+}
+
+
+/* Creamos un contenedor que asegure que el árbol esté al centro de la pantalla */
+.contenedor-centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Centra horizontalmente todo lo que esté dentro */
+  justify-content: center; /* Centra verticalmente si hay espacio disponible */
+  width: 100%;
+  padding: 20px 0;        /* Espacio superior e inferior para que no se pegue a nada */
+}
+
+/* Controlamos el tamaño exacto del árbol para que no sea gigante */
+.imagen-arbol {
+  width: 150px;           /* Puedes cambiar este valor a 100px o 200px según prefieras */
+  height: auto;           /* Mantiene la proporción original de la imagen sin deformarla */
+  display: block;
+  margin: 0 auto;         /* Asegura el centrado clásico */
+}
+.pie {
+  text-align: center;
+  padding: 1rem;
+  background-color: #742d00;
+}
+
+
+
+.link_to_calculadora {
+  font: inherit;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(111.97deg, #CC8BF2 35.63%, rgba(204, 139, 242, 0) 150.16%);
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 1. Contenedor que pone los elementos en fila horizontal */
+.tarjetas-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+/* 2. Estilo de cada tarjeta (que ahora funciona como botón completo) */
+.card {
+  display: flex;
+  flex-direction: column;  /* Apila la imagen arriba y el texto abajo */
+  align-items: center;     /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra verticalmente dentro de la tarjeta */
+  text-align: center;
+  
+  /* Tamaños fijos para que todas midan lo mismo */
+  width: 200px;            
+  height: 180px;           
+  
+  /* Aquí aplicamos el diseño de botón que querías */
+  background: linear-gradient(111.97deg, #CC8BF2 35.63%, rgba(204, 139, 242, 0) 150.16%);
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+  padding: 20px;
+  border-radius: 20px;
+  
+  /* Hereda las propiedades del enlace global, aseguramos color blanco */
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease; /* Efecto suave al pasar el mouse */
+}
+
+/* Efecto opcional: un pequeño movimiento al pasar el mouse por encima de la tarjeta */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 3. Control del tamaño de las imágenes dentro de las tarjetas */
+.card img {
+  width: 120px;             
+  height: 120px;           
+  object-fit: contain;     
+  margin-bottom: 15px;     
+}
+
+/* 4. Estilo de la imagen del árbol */
+.trees img {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Estilo definitivo para el pie de página */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto; /* Empuja el footer automáticamente al final de la página */
+}

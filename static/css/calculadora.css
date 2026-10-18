@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  background: linear-gradient(180deg, #d55a0d 0%, rgba(232, 68, 9, 0.977) 100%);
+  color: #ffffff;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Estilos para el contenedor del formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 480px;
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+/* Cada campo (label) ordenado en columna */
+.formulario label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Estilos comunes para inputs y selects */
+.formulario input,
+.formulario select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: inherit;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Estilo para el botón */
+.btn {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #d55a0d;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
